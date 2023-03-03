@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | News homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      width: 1400px;
+      padding: 20px;
+      font-family: inter;
+    }
+    .main-grid{
+      width: 1440px;
+      padding:20px;
+    }
+    .first-box{
+      display:grid;
+      width: 840px;
+    }
+    .box-in-first-box{
+      display:grid;
+      grid-template-columns: 410px 490px;
+    }
+    .big-box{
+      width: 1440px;
+      display:grid;
+      grid-template-columns: 970px 550px;
+    }
+    .lower-box{
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .box{
+      display:grid;
+      grid-template-columns: 150px 280px;
+      margin-bottom: 50px;
+    }
+    .head-image-box{
+      width: 960px;
+    }  
+    .head-image{
+      width:950px;
+      padding-right: 20px;
+    }
+    .paragraph-B-box{
+      width: 350px;
+      margin-top: 0;
+    }
+    .paragraph-B{
+      background-color:hsl(240, 100%, 5%);
+      color: hsl(36, 100%, 99%);
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 20px;
+      padding-right: 50px;
+      width: 100%;
+    }
+    .paragraph-1{
+      color:black;
+     font-size: 56px;
+     font-weight: bolder;
+     line-height: 55px;
+     padding :0;
+     text-align: start;
+     margin-top: 20px;
+     margin-bottom: 10px;
+    }
+    .paragraph-1-box{
+      width: 300px;
+    }
+    .paragraph-2{
+      color:hsl(236, 13%, 42%);
+      font-size: 23px;
+      padding-bottom: 20px;
+      text-align: left;
+      padding: 0;
+      margin-top: 20px;
+    }
+    .paragraph-head{
+      font-size: 25px;
+      padding-left:20px;
+      color: hsl(36, 100%, 99%);
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-bottom:10px;
+      padding-top: 25px;
+      white-space: nowrap;
+      cursor : pointer;
+      transition: color 0.15s;
+    }
+    .paragraph-head:hover{
+      color: hsl(35, 77%, 62%) ;
+    }
+    .paragraph-head-2{
+      padding-bottom: 25px;
+      margin-bottom: 0;
+      color:hsl(236, 13%, 42%);
+      font-size: 15px;
+    }
+    .new{
+      color: hsl(35, 77%, 62%) ;
+      font-size: 35px;
+      font-weight: bold;
+      padding-top: 35px;
+      padding-left: 25px;
+      margin-bottom: 10px;
+    }
+    .read-button{
+      background-color:hsl(5, 85%, 63%);
+      color: white;
+      border: none;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 35px;
+      padding-right: 35px;
+      font-size: 20px;
+      margin-bottom: 40px;
+      margin-top: 15px;
+      cursor:pointer;
+      transition: background-color 0.15s;
+    }
+    .read-button:hover{
+      background-color: black;
+    }
+    p{
+      padding-left: 20px;
+      color:  hsl(236, 13%, 42%);
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 30px;
+      margin-top: 0;
+      margin-left: 0;
+    } 
+    .image{
+      width: 100%;
+      cursor: pointer;
+    }
+    .number{
+      font-weight: bolder;
+      font-size: 48px;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-bottom: 15px;
+    }
+    .paragraph-big-text{
+      color:hsl(240, 100%, 5%);
+      font-size:25px;
+      font-weight: bolder;
+      margin-bottom: 0;
+      padding-bottom: 15px;
+      padding-top: 15px;
+      white-space:nowrap ;
+    }
+    
+    .paragraph-text{
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+    .head{
+      display: flex;
+
+    }
+    .letter-w{
+      color: black;
+      font-size: 70px;
+      font-weight: 800px;
+      flex: 1;
+      padding-left: 0;
+      margin-bottom: 0;
+      padding-bottom:  20px;
+    } 
+    .head-letter1{
+      margin-right: 55px;
+      transition: color 0.15s;
+      cursor: pointer;
+    }
+    .head-letter{
+      margin-right: 50px;
+      font-size: 20px;
+      margin-bottom: 80px;
+      transition: color 0.15s;
+      cursor: pointer;
+    }
+    .head-letter:hover{
+      color:rgb(255, 115, 0);
+    }
+    .head-letter1:hover{
+      color:rgb(255, 115, 0);
+    } 
+  </style>
+<body>
+<div class="main-grid">
+  <div class="head">
+    <p class="letter-w">W.</p>
+    <p class="head-letter">Home</p>
+    <p class="head-letter">New</p>
+    <p class="head-letter">Popular</p>
+    <p class="head-letter">Trending</p>
+    <p class="head-letter1">Categories</p>
+  </div>
+  <div class="big-box">  
+    <div>
+      <div class="first-box">
+        <div class="head-image-box">
+          <img class="head-image" src="assets/images/image-web-3-desktop.jpg">
+        </div>
+        <div class="box-in-first-box">
+          <div class="paragraph-1-box" >
+            <p class="paragraph-1" >The Bright Future Of Web 3.0 ?</p>
+          </div>
+          <div>
+            <p class= "paragraph-2" >we dive into the evolution of web that claim to put the power of the platform back into the hands of the people.but it is really fulfilling its promise</p> 
+            <p class="button-box"><button class="read-button">READ MORE</button></p>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class="paragraph-B-box">
+      <div class="paragraph-B">
+        <p class="new">NEW</p>
+        <p class="paragraph-head">Hydrogen Vs Eletric cars</p>
+        <p class="paragraph-head-2">Will Hydrogen-fueled cars ever catch up to EVs?</p>
+        <hr width="100%" >
+        <p class="paragraph-head"  >The Downside of AI Artistry</p>
+        <p class="paragraph-head-2">What are the possible adverse effects of on-demand AI image generation?</p>
+        <hr class="line" width="100%">
+        <p class="paragraph-head" >Is VC funding drying up?</p>
+        <p class="paragraph-head-2">Private funding by VC firms is down by 50% YOY. we take a lok at what that means</p>  
+      </div>
+    </div> 
+  </div>
+    <div class="lower-box"> 
+      <div class="box">
+        <div>
+            <img class="image" src="assets/images/image-retro-pcs.jpg">
+        </div>
+        <div>
+          <div class="text-box">
+            <p class="number">01</p>
+            <p class="paragraph-big-text">Reviving retro PCs</p>
+            <p class="paragraph-text">What happens when old PCs are given modern updates</p>
+          </div> 
+        </div>
+      </div>
+     
+        <div class="box">
+          <div>
+            <img class="image" src="assets/images/image-top-laptops.jpg">
+          </div>
+          <div class="text-box">
+            <P class="number">02</P>
+            <p class="paragraph-big-text">Top Laptops of 2022</p>
+            <p class="paragraph-text">Our best picks for various needs and budgets</p>
+          </div>
+        </div>
+        <div class="box">
+          <div>
+            <img class="image" src="assets/images/image-gaming-growth.jpg">
+          </div>
+          <div class="text-box">
+            <p class="number">03</p>
+            <p class="paragraph-big-text">The Growth of Gaming</p>
+            <p class="paragraph-text">How the pandemic has sparked fresh upportunities</p>
+          </div>
+        </div>
+    </div>
+</div>      
+ <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">matthew</a>.
+    </div>
+</body>
+</html>

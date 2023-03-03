@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body{
+      font-family: barlow, fraunces;
+      background-color:black;
+      width: fit-content;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    p{
+     margin-top: 0;
+     margin-bottom: 0;
+     font-family: barlow, fraunces; 
+    }
+    .headers{
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      right:30px;
+      top:45px;
+    }
+    .sunny-box{
+      position: absolute;
+      left: 30px;
+      top:40px;
+    }
+    .head-sunnyside{
+      color: white;
+      font-size: 35px;
+      font-weight: 700;
+      font-family: fraunces;
+      flex: 1;
+    }
+    .about{
+      font-size: 20px;
+      color: white;
+      font-weight: 600;
+      padding-right: 40px;
+      font-family: fraunces;
+    }
+    .service{
+      font-size: 20px;
+      color: white;
+      font-weight: 600;
+      font-family: fraunces;
+      padding-right: 40px;
+    }
+    .project{
+      font-size: 20px;
+      color: white;
+      font-weight: 600;
+      padding-right: 40px;
+      font-family: fraunces;
+    }
+    .button{
+      background-color: aliceblue;
+      color:black;
+      font-size: 2opx;
+      font-weight: 600;
+      border: none;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      border-radius: 20px;
+      font-family: fraunces;
+      transition: background-color 0.15s;
+      cursor: pointer;
+      margin-top: -5px;
+    }
+    .button:hover{
+      background-color: ;
+      color: white;
+    }
+    .creative{
+      color: hsl(0, 0%, 100%);
+      position: absolute;
+      font-size: 65px;
+      font-weight: 900;
+      font-family: fraunces;
+      top: 200px;
+      left:390px;
+    }
+    .arrow{
+      position: absolute;
+      left: 690px;
+      bottom: 330px;
+    }
+    .head-image{
+      width: 1420px;
+  
+    }
+    .head-image-box{
+      margin-bottom: 0;
+      position: relative;
+    }
+    .box-1{
+      display:grid;
+      width: 1420px;
+      grid-template-columns: 1fr 1fr;
+    
+    }
+    .box-1-images{
+      margin-top: 0;
+      margin-bottom: 0;
+      width:100%;
+    }
+    .graphic-design-box{
+      position: relative;
+    }
+    .graphic-design-text{
+      position: absolute;
+      bottom: 60px;
+      width: 440px;
+      margin-left:400px;
+    }
+    .photography-box{
+      position: relative;
+    }
+    .photography-text{
+      position: absolute;
+      bottom: 60px;
+      width: 440px;
+      margin-left: 160px;
+    }
+    .absolute-head{
+      font-size: 30px;
+      font-weight: 900;
+      margin-left: 65px;
+      margin-bottom: 30px;
+      color: hsl(167, 40%, 24%);
+      font-family: fraunces;
+    }
+    .absolute-head2{
+      margin-left: 100px;
+      font-size: 30px;
+      font-weight: 900;
+      margin-bottom: 40px;
+      color: hsl(167, 40%, 24%);
+      font-family: fraunces;
+    }
+    .absolute-body{
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 29px;
+      color: hsl(167, 40%, 24%);
+      font-family: fraunces;
+    }
+    .absolute-body2{
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 29px;
+      color: hsl(198, 62%, 26%);
+      font-family: fraunces;
+    }
+    .box-1-paragraph{
+      width: 590px;
+      padding-left: 120px;
+      padding-top: 100px;
+      background-color:hsl(0, 0%, 100%) ;
+    }
+    .heading{
+      color: hsl(212, 27%, 19%);
+      font-size: 47px;
+      font-weight: 900;
+      padding-bottom: 30px;
+      width: 500px;
+      font-family: fraunces;
+    }
+    .main-paragraph{
+      line-height: 30px;
+      font-size: 18px;
+      font-weight: 600px;
+      width: 520px;
+      padding-bottom: 30px;
+      color:  hsl(213, 9%, 39%);
+      font-family: fraunces;
+    }
+    .last-paragraph{
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-style:solid;
+      text-decoration-color:hsl(51, 100%, 49%);
+      font-family: fraunces;
+    }
+    .last-paragraph2{
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-style:solid;
+      text-decoration-color:hsl(7, 99%, 70%);
+      font-family: fraunces;
+    }
+    .box-2{
+      display:grid;
+      width:1420px;
+      align-items: center;
+      background-color:hsl(0, 0%, 100%) ;
+    }
+    .box-in-box-2{
+      width: 1200px;
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding-left: 150px;
+    }
+    .profile-picture{
+      width: 100px;
+      border-radius: 50%;
+      margin-top: 50px;
+      margin-left: 100px;
+      margin-bottom: 40px;
+    }
+    .comment{
+      width: 355px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 30px;
+      margin-bottom: 80px;
+      color: hsl(232, 10%, 55%);
+      font-family: fraunces;
+    }
+    .name{
+      font-size: 22px;
+      font-weight: 900;
+      margin-left: 110px;
+      margin-bottom: 20px;
+      font-family: fraunces;
+    }
+    .position{
+      font-size: 15px;
+      font-weight: 600;
+      margin-left: 80px;
+      margin-bottom: 20px;
+      color: hsl(232, 10%, 55%);
+      font-family: fraunces;
+
+    }
+    .positioned{
+      font-size: 15px;
+      font-weight: 600;
+      margin-left: 98px;
+      margin-bottom: 200px;
+      color: hsl(232, 10%, 55%);
+      font-family: fraunces;
+    }
+    .box-3{
+      margin-top: 0;
+      width: 1421px;
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .image-down{
+      width: 100%;
+    }
+    .testimony{
+      font-weight: 700;
+      font-size: 20px;
+      margin-left: 580px;
+      margin-top: 140px;
+      margin-bottom: 15px;
+      color: hsl(232, 10%, 55%);
+      font-family: fraunces;
+    }
+    .foot-box{
+      background-color: hsl(169, 46%, 60%);
+    }
+    .sunny-side{
+      font-size: 35px;
+      font-weight: 900;
+      padding-top: 80px;
+      padding-left: 630px;
+      color:hsl(167, 48%, 25%);
+      font-family: fraunces;
+    }
+    .footers-box{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding-top: 15px;
+    }
+    .footers{
+      font-size: 18px;
+      font-weight: 600;
+      padding: 35px;
+      padding-bottom: 50px;
+      color:hsl(167, 48%, 25%);
+      font-family: fraunces; 
+    }
+    .icon-box{
+      display:flex;
+      justify-content: center;
+    }
+    .icon{
+      padding: 15px;
+      padding-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+<div>  
+  <div class="head-image-box">
+    <div class="sunny-box">
+      <p class="head-sunnyside">sunnyside</p>
+    </div>
+    <div class="headers">
+      <p class="about">About</p>
+      <p class="service">Service</p>
+      <p class="project">Project</p>
+      <p class="contact"><button class="button">Contact</button></p>
+    </div>
+    <p class="creative">WE ARE CREATIVES</p>
+    <img class="arrow" src="images/icon-arrow-down.svg">
+    <img class="head-image" src="images/desktop/image-header.jpg" >
+  </div>
+  <div class="box-1">
+    <div class="box-1-paragraph">
+      <p class="heading">Transform your brand</p>
+      <p class="main-paragraph">We are a full-service creative agency specializing in helping brands grow fast.Engage your clients through compelling visuals that do most of the marketing for your.</p>
+      <p class="last-paragraph">LEARN MORE</p>
+    </div>
+        <img class="box-1-images" src="images/desktop/image-transform.jpg">
+  </div>
+  
+      <div class="box-1">
+          <img class="box-1-images" src="images/desktop/image-stand-out.jpg">
+        <div class="box-1-paragraph">  
+          <p class="heading">Stand out to the right audience</p>
+          <p class="main-paragraph">Using a collaborative formula of designers, researchers, photographers,videographers and copywritters, we'll build and extend your brand in digital places.</p>
+          <p class="last-paragraph2">LEARN MORE</p>
+        </div>
+      </div>
+    <div class="box-1">    
+      <div class="graphic-design-box">
+        <div class="graphic-design-text">
+          <p class="absolute-head">Graphic Design</p>
+          <p class="absolute-body">Great design makes you memorable, we deliver artwork that underscores your brand message and capture potential client's attention.</p>
+        </div>
+        <img class="box-1-images" src="images/desktop/image-graphic-design.jpg">
+      </div> 
+      <div class="photography-box">
+        <div class="photography-text">
+          <p class="absolute-head2">Photography</p>
+          <p class="absolute-body2">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+        </div>
+        <img class="box-1-images" src="images/desktop/image-photography.jpg">
+      </div>
+    </div>
+
+  <div class="box-2">
+    <p class="testimony">CLIENT TESTIMONIALS</p>
+    <div class="box-in-box-2">
+      <div class="profile-box">
+        <img class="profile-picture" src="images/image-emily.jpg">
+        <P class="comment">We put our trust in Sunnyside and they delivered. making sure our needs were met and deadline were always hit.</P>
+        <p class="name ">Emily R</p>
+        <p class="position">Marketing director</p>
+      </div>
+      <div class="profile-box">
+        <img class="profile-picture" src="images/image-thomas.jpg">
+        <p class="comment">Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.</p>
+        <p class="name">Thomas S</p>
+        <p class="position">Chief Operating officer</p>
+      </div>
+      <div class="profile-box">
+        <img class="profile-picture" src="images/image-jennie.jpg">
+        <p class="comment">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended</p>
+        <p class="name">Jennie F</p>
+        <p class="positioned">Business Owner</p>
+      </div>
+    </div>
+  </div>
+  <div class="box-3">
+    <img class="image-down" src="images/desktop/image-gallery-milkbottles.jpg">
+    <img class="image-down" src="images/desktop/image-gallery-orange.jpg">
+    <img class="image-down" src="images/desktop/image-gallery-cone.jpg">
+    <img class="image-down" src="images/desktop/image-gallery-sugarcubes.jpg">
+  </div>
+
+  <div class="foot-box">
+    <p class="sunny-side">Sunnyside</p>
+    <div class="footers-box">
+      <p class="footers">About</p>
+      <p class="footers">Service</p>
+      <p class="footers">Project</p>
+    </div>
+    <div class="icon-box">
+      <img class="icon" src="images/icon-facebook.svg">
+      <img class="icon" src="images/icon-instagram.svg">
+      <img class="icon"   src="images/icon-twitter.svg">
+      <img class="icon" src="images/icon-pinterest.svg">
+    </div>
+  </div>
+  
+</div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
